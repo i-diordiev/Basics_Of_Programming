@@ -4,30 +4,32 @@ using namespace std;
 
 int main()
 {
+    cout << "C++ Lab #1" << endl;
+    cout << "IS-03 Diordiev Ivan" << endl;
+    cout << "2 variant" << endl;
+    cout << "Decreasing function by return" << endl;
     int decr1 = 16,
         decr2 = 61,
         decr3 = -37;
-    int res1, res2, res3;
+    DecreaseReturn(decr1);
+    DecreaseReturn(decr2);
+    DecreaseReturn(decr3);
 
-    res1 = decrease_return(decr1);
-    res2 = decrease_return(decr2);
-    res3 = decrease_return(decr3);
+    cout << endl << "Decreasing function by link" << endl;
+    DecreaseLink(decr1);
+    DecreaseLink(decr2);
+    DecreaseLink(decr3);
 
-    decrease_link(decr1);
-    decrease_link(decr2);
-    decrease_link(decr3);
-
+    cout << endl << "Comparing function by link" << endl;
     bool r1, r2, r3;
+    CompareLink(100, 100, r1);
+    CompareLink(-8, 125, r2);
+    CompareLink(132, 131, r3);
 
-    compare_link(100, 100, r1);
-    compare_link(-8, 125, r2);
-    compare_link(132, 131, r3);
-
-    bool rr1, rr2, rr3;
-
-    rr1 = compare_return(100, 100);
-    rr2 = compare_return(-8, 125);
-    rr3 = compare_return(132, 131);
+    cout << endl << "Comparing function by return" << endl;
+    CompareReturn(100, 100);
+    CompareReturn(-8, 125);
+    CompareReturn(132, 131);
 
     system("pause");
     return 0;
