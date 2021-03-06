@@ -4,9 +4,11 @@
 class MyString
 {
 private:
-	std::string _string;
+	int _length;
+	char* _string;
 public:
-	MyString() {};
+	MyString();
+	MyString(int len, std::string str);
 	void SetString(std::string str);
 	int GetLength();
 	std::string GetString();

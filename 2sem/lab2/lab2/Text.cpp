@@ -1,5 +1,3 @@
-#include <string>
-#include <iostream>
 #include "Text.h"
 #include "MyString.h"
 
@@ -39,7 +37,6 @@ void Text::FindAndRemoveString(std::string str) {
 }
 
 void Text::ClearText() {
-	delete[] _text;
 }
 
 int Text::GetLengthOfLongest() {

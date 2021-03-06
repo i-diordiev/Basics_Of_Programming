@@ -1,0 +1,5 @@
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\ConsoleApp\Business\bin\Debug\Business.dll
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\ConsoleApp\Business\bin\Debug\Business.pdb
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\ConsoleApp\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\ConsoleApp\Business\obj\Debug\Business.dll
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\ConsoleApp\Business\obj\Debug\Business.pdb

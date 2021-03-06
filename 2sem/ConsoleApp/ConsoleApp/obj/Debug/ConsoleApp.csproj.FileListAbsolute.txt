@@ -1,0 +1,10 @@
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\ConsoleApp\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\ConsoleApp\ConsoleApp\bin\Debug\ConsoleApp.exe
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\ConsoleApp\ConsoleApp\bin\Debug\ConsoleApp.pdb
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\ConsoleApp\ConsoleApp\obj\Debug\ConsoleApp.csprojAssemblyReference.cache
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\ConsoleApp\ConsoleApp\obj\Debug\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\ConsoleApp\ConsoleApp\obj\Debug\ConsoleApp.exe
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\ConsoleApp\ConsoleApp\obj\Debug\ConsoleApp.pdb
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\ConsoleApp\ConsoleApp\bin\Debug\Business.dll
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\ConsoleApp\ConsoleApp\bin\Debug\Business.pdb
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\ConsoleApp\ConsoleApp\obj\Debug\ConsoleApp.csproj.CopyComplete
