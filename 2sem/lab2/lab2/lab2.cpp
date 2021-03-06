@@ -31,8 +31,10 @@ int main()
     cout << MyText.GetText() << endl;
 
     int pos_to_remove;
-    cout << endl << "Enter number of string to remove: ";
-    cin >> pos_to_remove;
+    do {
+        cout << endl << "Enter number of string to remove: ";
+        cin >> pos_to_remove;
+    } while (pos_to_remove > text_size);
     pos_to_remove--;
     MyText.RemoveString(pos_to_remove);
 
