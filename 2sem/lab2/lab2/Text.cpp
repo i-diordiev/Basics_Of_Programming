@@ -38,7 +38,7 @@ void Text::FindAndRemoveString(std::string str) {
 
 void Text::ClearText() {
 	for (int i = 0; i < _size; i++) {
-		_text[i].SetString("");
+		_text[i].DeleteString();
 	}
 	_size = 0;
 }

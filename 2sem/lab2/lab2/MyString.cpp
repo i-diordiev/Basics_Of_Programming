@@ -1,28 +1,19 @@
 #include "MyString.h"
 #include <iostream>
 
-MyString::MyString() {
-	_length = 0;
-	_string = new char[_length];
-}
-
-MyString::MyString(int len, std::string str) {
-	_length = len;
-	_string = new char[_length];
-	for (int i = 0; i < _length; i++) {
-		_string[i] = str[i];
-	}
-}
+MyString::MyString() { }
 
 void MyString::SetString(std::string str) {
 	_length = str.length();
+	_string = new char[_length + 1];
 	for (int i = 0; i < _length; i++) {
 		_string[i] = str[i];
 	}
-}
+	_string[_length] = '\0';
+ }
 
 int MyString::GetLength() {
-	return sizeof(_string);
+	return _length;
 }
 
 std::string MyString::GetString() {
@@ -39,3 +30,7 @@ void MyString::SetUpperFirst() {
 	}
 }
 
+void MyString::DeleteString() {
+	delete[] _string;
+	_length = 0;
+}
