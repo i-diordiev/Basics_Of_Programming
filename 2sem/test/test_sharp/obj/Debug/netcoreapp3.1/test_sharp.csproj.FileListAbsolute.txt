@@ -1,0 +1,13 @@
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test_sharp\bin\Debug\netcoreapp3.1\test_sharp.exe
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test_sharp\bin\Debug\netcoreapp3.1\test_sharp.deps.json
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test_sharp\bin\Debug\netcoreapp3.1\test_sharp.runtimeconfig.json
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test_sharp\bin\Debug\netcoreapp3.1\test_sharp.runtimeconfig.dev.json
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test_sharp\bin\Debug\netcoreapp3.1\test_sharp.dll
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test_sharp\bin\Debug\netcoreapp3.1\test_sharp.pdb
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test_sharp\obj\Debug\netcoreapp3.1\test_sharp.csprojAssemblyReference.cache
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test_sharp\obj\Debug\netcoreapp3.1\test_sharp.AssemblyInfoInputs.cache
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test_sharp\obj\Debug\netcoreapp3.1\test_sharp.AssemblyInfo.cs
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test_sharp\obj\Debug\netcoreapp3.1\test_sharp.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test_sharp\obj\Debug\netcoreapp3.1\test_sharp.dll
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test_sharp\obj\Debug\netcoreapp3.1\test_sharp.pdb
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test_sharp\obj\Debug\netcoreapp3.1\test_sharp.genruntimeconfig.cache

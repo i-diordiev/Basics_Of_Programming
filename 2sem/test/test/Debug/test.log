@@ -1,5 +1,2 @@
 ﻿  test.cpp
-C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test\test.cpp(42,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test\test.cpp(81,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test\test.cpp(85,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   test.vcxproj -> C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\Debug\test.exe
