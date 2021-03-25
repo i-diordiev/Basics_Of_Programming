@@ -28,30 +28,26 @@ namespace lab3
         public int _size;
         public char[] _array;
     
-        public MyClass(char[] source, int size)
+        public MyClass(char[] source, int size) //constructor
         {
             _array = source;
             _size = size;
         }
 
-        public MyClass(int size, char[] values)
-        {
-            _size = size;
-            _array = new char[_size];
-            for (int i = 0; i < _size; i++)
-            {
-                _array[i] = values[i];
-            }
-        }
-
-        public char this[int index] {
+        public char this[int index] { //indexator
             get
             {
                 if (index < _size && index >= 0)
                 {
                     return Char.ToUpper(_array[index]);
                 }
-                return '!';
+                else if (index > _size)
+                {
+                    return Char.ToUpper(_array[_size - 1]);
+                } else
+                {
+                    return Char.ToUpper(_array[0]);
+                }
             }
             set
             {
@@ -61,7 +57,7 @@ namespace lab3
                 }
             }
         }
-        public int NumOfVowel
+        public int NumOfVowel //property
         {
             get
             {
@@ -69,7 +65,7 @@ namespace lab3
             }
         }
 
-        public int CountVowel()
+        public int CountVowel() //method for counting vowels in char array
         {
             int count = 0;
             foreach (char element in _array)
