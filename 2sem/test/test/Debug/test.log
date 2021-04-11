@@ -1,2 +1,4 @@
 ﻿  test.cpp
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test\test.cpp(105,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\test\test.cpp(111,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
   test.vcxproj -> C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\test\Debug\test.exe
