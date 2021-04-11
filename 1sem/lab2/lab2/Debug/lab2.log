@@ -1,0 +1,6 @@
+﻿  lab2.cpp
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\1sem\lab2\lab2\lab2.cpp(8,42): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\1sem\lab2\lab2\lab2.cpp(11,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\1sem\lab2\lab2\lab2.cpp(12,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\1sem\lab2\lab2\lab2.cpp(13,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  lab2.vcxproj -> C:\Users\Ivan\KPI\C++\Basics_Of_Programming\1sem\lab2\Debug\lab2.exe

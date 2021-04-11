@@ -1,0 +1,4 @@
+﻿  lab3.cpp
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\1sem\lab3\lab3\lab3.cpp(9,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\1sem\lab3\lab3\lab3.cpp(11,23): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  lab3.vcxproj -> C:\Users\Ivan\KPI\C++\Basics_Of_Programming\1sem\lab3\Debug\lab3.exe

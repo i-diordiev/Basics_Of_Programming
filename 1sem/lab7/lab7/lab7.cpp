@@ -1,46 +1,45 @@
 #include <iostream>
 using namespace std;
 
-const int n = 20;
-float summa = 0;
-float M[n];
-
-void generation() {
+void Generation(float* array, int n) {
     for (int i = 0; i < n; i++) {
-        M[i] = (rand() % 1000) * 10. / 1000. - (rand() % 1000) * 10. / 1000.;
+        array[i] = (rand() % 1000) * 10. / 1000. - (rand() % 1000) * 10. / 1000.;
     }
 }
 
-float sum() {
+void CountSum(float* array, float &summa, int n) {
     for (int i = 0; i < n; i++) {
-        summa += M[i];
-    }
-    return summa;
-}
-
-void print() {
-    for (int i = 0; i < n; i++) {
-        cout << M[i] << " ";
+        summa += array[i];
     }
 }
 
-void add_sum(float summa) {
+void PrintArray(float* array, int n) {
     for (int i = 0; i < n; i++) {
-        if (M[i] < 0) {
-            M[i] += summa;
+        cout << array[i] << " ";
+    }
+}
+
+void AddSum(float* array, float summa, int n) {
+    for (int i = 0; i < n; i++) {
+        if (array[i] < 0) {
+            array[i] += summa;
         }
     }
 }
 
 int main()
 {
-    generation();
+    int n = 20;
+    float summa = 0;
+    float* M = new float[n];
+    
+    Generation(M, n);
     cout << "Source array is : " << endl;
-    print();
-    summa = sum();
+    PrintArray(M, n);
+    CountSum(M, summa, n);
     cout << "\nSum of elements is " << summa << endl;
-    add_sum(summa);
+    AddSum(M, summa, n);
     cout << "Final array is : " << endl;
-    print();
+    PrintArray(M, n);
     return 0;
 }
