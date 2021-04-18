@@ -1,127 +1,118 @@
 ﻿using System;
 
-namespace srm5
+namespace Srm6
 {
     class Program
     {
         static void Main(string[] args)
         {
+            double e = 0.00001;
+            Console.WriteLine("Полiном:\n9*x^5+3*x^2-2^x-1=0\nТочнiсть:{0}\n", e);
+            double[] a = { 1 };
+            double[] b = { 3 };
+
+            for (int i = 0; i < 1; i++)
+            {
+                Console.WriteLine("x{0} Є [{1};{2}]", i + 1, a[i], b[i]);
+                //MethodBisection(a[i], b[i], e);
+                MethodHord(a[i], b[i], e);
+                //MethodNewton(a[i], b[i], e);
+                Console.WriteLine();
+            }
+        }
+
+        static double Func(double x)
+        {
             int n = 5;
-            double[] x = { -4, -2, 0, 2, 4 };
-            double[] y = { -2.01, -1.958, 0, 1.958, 2.01 };
-            
+            int[] A = { 1, -3, 0, 7, 0, -12 };
+            double result = 0;
+            for (int i = n; i >= 0; i--)
+                result += A[i] * Math.Pow(x, i);
 
-            Console.WriteLine("\nIнтерполяцiйний полiном Ньютона");
-            Newton(x, y, n);
-
-            Console.WriteLine("\nIнтерполяцiя кубiчними сплайнами ");
-            for (int i = 0; i < n; i++)
-                Spline(x, y, n, x[i]);
+            return result;
         }
-
-        static void Newton(double[] x, double[] y, int n)
+        static double Func1(double x)
         {
-            double[] del1 = new double[n - 1];
-            double[] del2 = new double[n - 2];
-            double[] del3 = new double[n - 3];
-            double[] del4 = new double[n - 4];
+            int n = 4;
+            int[] A = { 5, -12, 0, 14, 0 };
+            double result = 0;
+            for (int i = n; i >= 0; i--)
+                result += A[i] * Math.Pow(x, i);
 
-            for (int k = 0; k < n - 1; k++)
-            {
-                del1[k] = (y[k] - y[k + 1]) / (x[k] - x[k + 1]);
-            }
-            for (int j = 0; j < n - 2; j++)
-            {
-                del2[j] = (del1[j] - del1[j + 1]) / (x[j] - x[j + 2]);
-            }
-            for (int i = 0; i < n - 3; i++)
-            {
-                del3[i] = (del2[i] - del2[i + 1]) / (x[i] - x[i + 3]);
-            }
-            for (int i = 0; i < n - 4; i++)
-            {
-                del4[i] = (del3[i] - del3[i + 1]) / (x[i] - x[i + 4]);
-            }
-            Console.WriteLine($"{y[0]:f5}+{del1[0]:f5}*(x-{x[0]}){del2[0]:f5}*(x-{x[0]})*(x-{x[1]})+{del3[0]:f5}*(x-{x[0]})*(x-{x[1]})*(x-{x[2]})+{del4[0]:f5}*(x-{x[0]})*(x-{x[1]})*(x-{x[2]})*(x-{x[3]})");
-
+            return result;
         }
-
-        static void NewTon(double[] x, double[] y, int n, double X)
+        static double Func2(double x)
         {
-            double[] Xn = y;
-            double[] delta = new double[n];
+            int n = 3;
+            int[] A = { 6, 0, 0, 20 };
+            double result = 0;
+            for (int i = n; i >= 0; i--)
+                result += A[i] * Math.Pow(x, i);
 
-            delta[0] = y[0];
+            return result;
         }
-
-        static void Spline(double[] X, double[] Y, int n, double x0)
+        static void MethodBisection(double a, double b, double e)
         {
-            double[] a = new double[n - 1];
-            double[] b = new double[n - 1];
-            double[] d = new double[n - 1];
-            double[] h = new double[n - 1];
-
-            double[,] A = new double[n - 1, n];
-
-            double[] by = new double[n];
-
-            for (int i = 0; i < n - 1; i++)
+            int iter = 0;
+            double x;
+            if (Func(a) == 0) x = a;
+            else if (Func(b) == 0) x = b;
+            else
             {
-                a[i] = Y[i];
-                h[i] = X[i + 1] - X[i];
-            }
-            A[0, 0] = 1;
-            A[n - 2, n - 2] = 1;
-            for (int i = 1; i < n - 2; i++)
-            {
-                A[i, i - 1] = h[i - 1];
-                A[i, i] = 2 * (h[i - 1] + h[i]);
-                A[i, i + 1] = h[i];
-                by[i] = 3 * (((Y[i + 1] - Y[i]) / h[i]) - ((Y[i] - Y[i - 1]) / h[i - 1]));
-            }
-            double[] c = Progon(A, by, n - 1);
-
-            for (int i = 0; i < n - 1; i++)
-            {
-                if (i != n - 2)
+                double c = 0;
+                while (Math.Abs(b - a) > e || Math.Abs(Func(c)) > e)
                 {
-                    d[i] = (c[i + 1] - c[i]) / (3 * h[i]);
-                    b[i] = ((Y[i + 1] - Y[i]) / h[i]) - h[i] * (c[i + 1] + 2 * c[i]) / 3;
+                    c = (a + b) / 2;
+                    if (Func(a) * Func(c) < 0)
+                    {
+                        b = c;
+                    }
+                    else
+                    {
+                        a = c;
+                    }
+                    iter++;
+                }
+                x = c;
+            }
+            Console.WriteLine("Метод бiсекцiї\tx={0:f5}\tiтерацiй:{1}", x, iter);
+        }
+
+        static void MethodHord(double a, double b, double e)
+        {
+            int iter = 0;
+            double x;
+            x = a - (b - a) / (Func(b) - Func(a)) * Func(a);
+            while (Math.Abs(Func(x)) > e || (Math.Abs(x - a) > e && Math.Abs(x - b) > e))
+            {
+                if (Func(a) * Func2(a) > 0)
+                {
+                    b = x;
+                    x = x - (Func(x) * (x - a) / (Func(x) - Func(a)));
                 }
                 else
                 {
-                    d[i] = (-1) * (c[i] / (3 * h[i]));
-                    b[i] = ((Y[i] - Y[i - 1]) / h[i]) - ((2 * h[i] * c[i]) / 3);
-
+                    a = x;
+                    x = x - (Func(x)) / (Func(b) - Func(x)) * (b - x);
                 }
+                iter++;
             }
-            d[n - 2] = -c[n - 2] / (3 * h[n - 2]);
-            b[n - 2] = ((Y[n - 1] - Y[n - 2]) / h[n - 2]) - 2 * h[n - 2] * c[n - 2] / 3;
-
+            Console.WriteLine("Метод хорд\tx={0:f5}\tiтерацiй:{1}", x, iter);
         }
-
-        static double[] Progon(double[,] A, double[] b, int n)
+        static void MethodNewton(double a, double b, double e)
         {
-            double[] K = new double[n];
-            int n1 = n - 1;
-
-            double y = A[0, 0];
-            double[] a = new double[n];
-            double[] b1 = new double[n];
-            a[0] = -A[0, 1] / y;
-            b1[0] = b[0] / y;
-            for (int i = 1; i < n1; i++)
+            int iter = 1;
+            double x, x0 = 0;
+            if (Func(a) * Func2(a) > 0) x0 = a;
+            else x0 = b;
+            x = x0 - Func(x0) / Func1(x0);
+            while (Math.Abs(x - x0) > e || Math.Abs(Func(x)) > e)
             {
-                y = A[i, i] + A[i, i - 1] * a[i - 1];
-                a[i] = -A[i, i + 1] / y;
-                b1[i] = (b[i] - A[i, i - 1] * b1[i - 1]) / y;
+                iter++;
+                x0 = x;
+                x = x0 - Func(x0) / Func1(x0);
             }
-            K[n1] = b1[n1];
-            for (int i = n1 - 1; i >= 0; i--)
-            {
-                K[i] = a[i] * K[i + 1] + b1[i];
-            }
-            return K;
+            Console.WriteLine("Метод Ньютона\tx={0:f5}\tiтерацiй:{1}", x, iter);
         }
     }
 }
