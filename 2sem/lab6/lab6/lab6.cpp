@@ -20,12 +20,12 @@ int main()
     points[2][0] = 7;
     points[2][1] = 2;
 
-    Triangle tr(points);
+    Triangle tr(points);  // creating object Triangle and calling methods
     cout << "Square of triangle - " << tr.GetSquare() << endl;
     cout << "Perimeter of triangle - " << tr.GetPerimeter() << endl << endl;
 
-    Circle cr(4);
-    cout << "Square of circle - " << cr.GetSquare() << endl;
+    Circle cr(4);  // creating object Circle and calling methods
+    cout << "Square of circle - " << cr.GetSquare() << endl;  
     cout << "Perimeter of square - " << cr.GetPerimeter() << endl << endl;
   
     delete[] points;
