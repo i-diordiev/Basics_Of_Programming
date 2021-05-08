@@ -1,118 +1,53 @@
 ﻿using System;
 
-namespace Srm6
+namespace srm7
 {
     class Program
     {
         static void Main(string[] args)
         {
-            double e = 0.00001;
-            Console.WriteLine("Полiном:\n9*x^5+3*x^2-2^x-1=0\nТочнiсть:{0}\n", e);
-            double[] a = { 1 };
-            double[] b = { 3 };
-
-            for (int i = 0; i < 1; i++)
-            {
-                Console.WriteLine("x{0} Є [{1};{2}]", i + 1, a[i], b[i]);
-                //MethodBisection(a[i], b[i], e);
-                MethodHord(a[i], b[i], e);
-                //MethodNewton(a[i], b[i], e);
-                Console.WriteLine();
-            }
+            double a = 1, b = 3, e = 0.0001, k = 0;
+            Console.WriteLine("Лiмiт:\ncos(x)/(x+1)\nвiд {0} до {1} з точнiстю до {2}\n", a, b, e);
+            Console.WriteLine("Метод трапецii:\n{0:f4}\nКiлькiсть iтерацiй: {1}\n", Trapezium(ref k, a, b, e), k);
+            Console.WriteLine("Метод Гауса:\n{0:f4}", Gausa(a, b));
         }
-
         static double Func(double x)
         {
-            int n = 5;
-            int[] A = { 1, -3, 0, 7, 0, -12 };
-            double result = 0;
-            for (int i = n; i >= 0; i--)
-                result += A[i] * Math.Pow(x, i);
-
-            return result;
+            return Math.Cos(x) / (x + 1);
         }
-        static double Func1(double x)
+        static double Trapezium(ref double k, double a, double b, double e)
         {
-            int n = 4;
-            int[] A = { 5, -12, 0, 14, 0 };
-            double result = 0;
-            for (int i = n; i >= 0; i--)
-                result += A[i] * Math.Pow(x, i);
-
-            return result;
-        }
-        static double Func2(double x)
-        {
-            int n = 3;
-            int[] A = { 6, 0, 0, 20 };
-            double result = 0;
-            for (int i = n; i >= 0; i--)
-                result += A[i] * Math.Pow(x, i);
-
-            return result;
-        }
-        static void MethodBisection(double a, double b, double e)
-        {
-            int iter = 0;
-            double x;
-            if (Func(a) == 0) x = a;
-            else if (Func(b) == 0) x = b;
-            else
+            int n = 2;
+            double rez0 = 1, rez = 0;
+            while (Math.Abs(rez - rez0) > e)
             {
-                double c = 0;
-                while (Math.Abs(b - a) > e || Math.Abs(Func(c)) > e)
+                rez0 = rez;
+                rez = 0;
+                double h = (b - a) / n, x = a;
+                for (int i = 0; i < n - 1; i++)
                 {
-                    c = (a + b) / 2;
-                    if (Func(a) * Func(c) < 0)
-                    {
-                        b = c;
-                    }
-                    else
-                    {
-                        a = c;
-                    }
-                    iter++;
+                    rez += (Func(x) + Func(x + h)) / 2;
+                    x += h;
                 }
-                x = c;
+                rez *= h;
+                n *= 2;
+                k++;
             }
-            Console.WriteLine("Метод бiсекцiї\tx={0:f5}\tiтерацiй:{1}", x, iter);
+
+            return rez;
         }
 
-        static void MethodHord(double a, double b, double e)
+        static double Gausa(double a, double b)
         {
-            int iter = 0;
-            double x;
-            x = a - (b - a) / (Func(b) - Func(a)) * Func(a);
-            while (Math.Abs(Func(x)) > e || (Math.Abs(x - a) > e && Math.Abs(x - b) > e))
+            double x, rez = 0;
+            double[] X = { -0.861136, -0.339981, 0.339981, 0.861136 };
+            double[] A = { 0.347855, 0.652145, 0.652145, 0.347855 };
+            for (int i = 0; i < 4; i++)
             {
-                if (Func(a) * Func2(a) > 0)
-                {
-                    b = x;
-                    x = x - (Func(x) * (x - a) / (Func(x) - Func(a)));
-                }
-                else
-                {
-                    a = x;
-                    x = x - (Func(x)) / (Func(b) - Func(x)) * (b - x);
-                }
-                iter++;
+                x = (a + b) / 2 + X[i] * (b - a) / 2;
+                rez += A[i] * Func(x);
             }
-            Console.WriteLine("Метод хорд\tx={0:f5}\tiтерацiй:{1}", x, iter);
-        }
-        static void MethodNewton(double a, double b, double e)
-        {
-            int iter = 1;
-            double x, x0 = 0;
-            if (Func(a) * Func2(a) > 0) x0 = a;
-            else x0 = b;
-            x = x0 - Func(x0) / Func1(x0);
-            while (Math.Abs(x - x0) > e || Math.Abs(Func(x)) > e)
-            {
-                iter++;
-                x0 = x;
-                x = x0 - Func(x0) / Func1(x0);
-            }
-            Console.WriteLine("Метод Ньютона\tx={0:f5}\tiтерацiй:{1}", x, iter);
+            return rez * (b - a) / 2;
         }
     }
 }
