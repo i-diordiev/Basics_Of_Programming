@@ -53,8 +53,11 @@ MySquare MySquare::operator / (MySquare right) {  // overloaded operator /
 	float** temp = new float* [4];
 	for (int i = 0; i < 4; i++) {
 		temp[i] = new float[2];
-		for (int j = 0; j < 2;j++) {
-			temp[i][j] = leftSource[i][j] / rightSource[i][j];
+		for (int j = 0; j < 2; j++) {
+			if (rightSource[i][j] == 0)
+				throw "Division by zero!";
+			else
+				temp[i][j] = leftSource[i][j] / rightSource[i][j];
 		}
 	}
 

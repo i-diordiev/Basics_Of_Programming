@@ -1,0 +1,10 @@
+﻿  MyExpression.cpp
+  lab7.cpp
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7\lab7.cpp(18,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7\lab7.cpp(18,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7\lab7.cpp(18,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7\lab7.cpp(32,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7\lab7.cpp(32,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7\lab7.cpp(32,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+  lab7.vcxproj -> C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\Debug\lab7.exe

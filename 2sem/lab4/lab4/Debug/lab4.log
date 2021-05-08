@@ -1,2 +1,7 @@
-﻿  lab4.cpp
+﻿  MySquare.cpp
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab4\lab4\MySquare.cpp(37,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab4\lab4\MySquare.cpp(38,12): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab4\lab4\MySquare.cpp(42,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  lab4.cpp
+  Generating Code...
   lab4.vcxproj -> C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab4\Debug\lab4.exe

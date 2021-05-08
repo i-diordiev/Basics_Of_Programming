@@ -62,7 +62,12 @@ int main()
         cout << endl;
     }
 
-    K1 = K2 / K3;  // dividing K2 by K3
+    try {
+        K1 = K2 / K3;  // dividing K2 by K3
+    }
+    catch (const char* message) {
+        cout << message << endl;
+    }
     PointsOfFirst = K1.GetPoints();
     cout << "Points of first figure after dividing K2 by K3:" << endl;
     for (int i = 0; i < 4; i++) {

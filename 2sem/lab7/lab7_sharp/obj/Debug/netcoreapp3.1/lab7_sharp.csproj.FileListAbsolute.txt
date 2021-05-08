@@ -1,0 +1,13 @@
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7_sharp\bin\Debug\netcoreapp3.1\lab7_sharp.exe
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7_sharp\bin\Debug\netcoreapp3.1\lab7_sharp.deps.json
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7_sharp\bin\Debug\netcoreapp3.1\lab7_sharp.runtimeconfig.json
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7_sharp\bin\Debug\netcoreapp3.1\lab7_sharp.runtimeconfig.dev.json
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7_sharp\bin\Debug\netcoreapp3.1\lab7_sharp.dll
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7_sharp\bin\Debug\netcoreapp3.1\lab7_sharp.pdb
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7_sharp\obj\Debug\netcoreapp3.1\lab7_sharp.csprojAssemblyReference.cache
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7_sharp\obj\Debug\netcoreapp3.1\lab7_sharp.AssemblyInfoInputs.cache
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7_sharp\obj\Debug\netcoreapp3.1\lab7_sharp.AssemblyInfo.cs
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7_sharp\obj\Debug\netcoreapp3.1\lab7_sharp.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7_sharp\obj\Debug\netcoreapp3.1\lab7_sharp.dll
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7_sharp\obj\Debug\netcoreapp3.1\lab7_sharp.pdb
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab7\lab7_sharp\obj\Debug\netcoreapp3.1\lab7_sharp.genruntimeconfig.cache
