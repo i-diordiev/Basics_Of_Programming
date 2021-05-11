@@ -9,34 +9,36 @@ int main()
     cout << "IS-03 Diordiev Ivan" << endl;
     cout << "2 variant" << endl << endl;
 
-    int size = 5;
-    MyExpression* array = new MyExpression[size + 1];  // creating array of objects 
-    for (int i = 0; i < size; i++) {
-        int a = rand() % 100;  // random generator for a, c, d
-        int c = rand() % 100;
-        int d = rand() % 100;
-        array[i].SetValues(a, c, d);  // setting a, c, d for each object
+    MyExpression* array = new MyExpression[3];  // creating array of objects 
+ 
+    array[0].SetValues(1, 1, 1); // creating normal object
 
-        cout << "Object #" << i + 1 << endl;  // trying to calculate values of expressions
-        try {
-            cout << "Value is " << array[i].GetResult() << endl << endl;
-        }
-        catch(const char* message) {
-            cout << message << endl << endl;
-        }
-    }
-
-    int a = 4;  // creating object with ZeroDivisionException
-    int c = -1;
-    int d = 0;
-    array[size].SetValues(a, c, d);
-
-    cout << "Object #" << size + 1 << endl;
+    cout << "Object #1" << endl;
     try {
-        cout << "Value is " << array[size].GetResult() << endl << endl;
+        cout << "Value is " << array[0].GetResult() << endl << endl;
     }
-    catch (const char* message) {
-        cout << message << endl << endl;
+    catch (runtime_error err) {
+        cout << err.what() << endl << endl;
+    }
+
+    array[1].SetValues(2, 0, 1); // creating object with non-positive value in logarithm
+
+    cout << "Object #2" << endl;
+    try {
+        cout << "Value is " << array[1].GetResult() << endl << endl;
+    }
+    catch (runtime_error err) {
+        cout << err.what() << endl << endl;
+    }
+
+    array[2].SetValues(4, -1, 0); // creating object with ZeroDivisionException
+
+    cout << "Object #3" << endl;
+    try {
+        cout << "Value is " << array[2].GetResult() << endl << endl;
+    }
+    catch (runtime_error err) {
+        cout << err.what() << endl << endl;
     }
 
     system("pause");

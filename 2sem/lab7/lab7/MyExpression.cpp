@@ -1,4 +1,6 @@
 #include <cmath>
+#include <exception>
+#include <stdexcept>
 #include "MyExpression.h"
 
 MyExpression::MyExpression() {  // default constructor
@@ -21,9 +23,9 @@ void MyExpression::SetValues(float a, float c, float d) {  // values setter
 
 void MyExpression::Calculate() {  // method for calculating value of expression
 	if ((a / 4 + c) == 0)
-		throw "Division by zero! Change A or C!";
-	else if ((2 * c - a) < 0)
-		throw "Negative value in logarithm! Change A or C!";
+		throw std::runtime_error("Division by zero! Change A or C!");
+	else if ((2 * c - a) <= 0)
+		throw std::runtime_error("Non-positive value in logarithm! Change A or C!");
 	else {
 		result = (log10(2 * c - a) + d - 152) / (a / 4 + c);
 	}

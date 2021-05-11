@@ -36,8 +36,8 @@ namespace lab7_sharp
         {
             if ((a / 4 + c) == 0)
                 throw new Exception("Division by zero! Change A or C!\n");
-            else if ((2 * c - a) < 0)
-                throw new Exception("Negative value in logarithm! Change A or C!\n");
+            else if ((2 * c - a) <= 0)
+                throw new Exception("Non-positive value in logarithm! Change A or C!\n");
             else
             {
                 _result = (Math.Log10(2 * c - a) + d - 152) / (a / 4 + c);
