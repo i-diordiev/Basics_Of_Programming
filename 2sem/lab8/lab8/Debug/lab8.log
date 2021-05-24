@@ -1,0 +1,11 @@
+﻿  lab8.cpp
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab8\lab8\lab8.cpp(13,21): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab8\lab8\lab8.cpp(14,21): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab8\lab8\lab8.cpp(15,22): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab8\lab8\lab8.cpp(16,22): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab8\lab8\lab8.cpp(17,21): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab8\lab8\lab8.cpp(18,21): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab8\lab8\lab8.cpp(19,23): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab8\lab8\lab8.cpp(20,23): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab8\lab8\lab8.cpp(33,31): warning C4305: 'argument': truncation from 'double' to 'float'
+  lab8.vcxproj -> C:\Users\Ivan\KPI\C++\Basics_Of_Programming\2sem\lab8\Debug\lab8.exe
