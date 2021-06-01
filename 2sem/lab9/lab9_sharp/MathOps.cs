@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace lab9_sharp
+﻿namespace lab9_sharp
 {
     public delegate void MyEventHandler(object sender, string message);  // delegate
     class MathOps
